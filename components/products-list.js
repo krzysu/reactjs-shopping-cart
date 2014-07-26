@@ -18,6 +18,3 @@ var ProductsList = React.createClass({
         );
     }
 });
-
-
-React.renderComponent(<ProductsList data={productsCollection} />, document.getElementById('products-list'));

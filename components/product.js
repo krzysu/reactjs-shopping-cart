@@ -8,7 +8,15 @@ var Product = React.createClass({
     },
 
     addToCart: function(e) {
-      console.log('clicked', e);
+      if(!this.state.added) {
+        // add
+        $.publish('cart.added', this.props.data);
+      }
+      else {
+        // remove
+        $.publish('cart.removed', this.props.data.id);
+      }
+
       this.setState({
         added: !this.state.added
       });
