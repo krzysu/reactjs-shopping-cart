@@ -2,7 +2,7 @@
 
 example of shopping cart implemented in react.js
 
-to check the demo [click here](http://krzysu.github.io/reactjs-shopping-cart/)
+for demo [click here](http://krzysu.github.io/reactjs-shopping-cart/)
 
 author: Kris Urbas [@krzysu](https://twitter.com/krzysu)   
 licence: MIT
