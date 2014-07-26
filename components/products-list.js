@@ -1,0 +1,26 @@
+/** @jsx React.DOM */
+
+var ProductsList = React.createClass({
+    render: function() {
+
+                console.log(this.props);
+
+
+        var products = this.props.data.map(function(product) {
+            return (
+              <li key={product.id}>
+                <Product data={product} />
+              </li>
+            )
+        });
+
+        return (
+          <ul className="cf">
+            {products}
+          </ul>
+        );
+    }
+});
+
+
+React.renderComponent(<ProductsList data={productsCollection} />, document.getElementById('products-list'));

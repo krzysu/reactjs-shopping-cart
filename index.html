@@ -3,6 +3,7 @@
   <head>
     <title>React Shop</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="build/react.js"></script>
     <script src="build/JSXTransformer.js"></script>
   </head>
@@ -10,30 +11,16 @@
 
     <div class="container">
       <div class="row">
-        <h1>Best shop ever</h1>
+        <div class="col-md-12">
+          <h1>Best shop ever</h1>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-8">
 
           Products
-
-          <div class="row">
-            <div class="col-md-4">
-
-              <div class="thumbnail">
-                <img src="images/01.jpg" alt="product">
-                <div class="caption">
-                  <h3>Thumbnail label</h3>
-                  <p>...</p>
-                  <div>
-                    <a href="#" class="btn btn-primary" role="button">Add to cart</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-4"></div>
+          <div id="products-list" class="products-list">
+            <!-- rendered by react js -->
           </div>
 
         </div>
@@ -41,16 +28,12 @@
       </div>
     </div>
 
-    
-
-
-
-    <div id="example"></div>
-
-
-
-
-
+    <script src="data/products.js"></script>
+    <script type="text/jsx" src="components/product.js"></script>
+    <script type="text/jsx" src="components/products-list.js"></script>
     <script type="text/jsx" src="components/cart.js"></script>
+    <script type="text/jsx">
+      // React.renderComponent(<ProductsList data={productsCollection} />, document.getElementById('products-list'));
+    </script>
   </body>
 </html>

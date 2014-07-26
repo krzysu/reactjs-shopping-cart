@@ -1,0 +1,30 @@
+.products-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products-list li {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+
+.products-list li:nth-of-type(3) {
+  margin-right: 0;
+}
+
+/* utils */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
