@@ -53,18 +53,27 @@ var Cart = React.createClass({
 
         var items = this.state.items.map(function(item) {
             return (
-              <li key={item.id}>
-                {item.name} - {item.price} {item.currency}
+              <li key={item.id} className="cart-item">
+                <span className="cart-item__name">{item.name}</span>
+                <span className="cart-item__price">{item.price} {item.currency}</span>
               </li>
             )
         });
 
+        var body = (
+          <ul>
+            {items}
+          </ul>
+        );
+
+        var empty = <div className="alert alert-info">Cart is empty</div>;
+
         return (
-          <div>
-            <ul>
-              {items}
-            </ul>
-            <div className="cart__total">{this.state.total} {this.state.currency}</div>
+          <div className="panel panel-default">
+            <div className="panel-body">
+              {items.length > 0 ? body : empty}
+              <div className="cart__total">Total: {this.state.total} {this.state.currency}</div>
+            </div>
           </div>
         );
     }

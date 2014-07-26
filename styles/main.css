@@ -16,28 +16,51 @@ ul {
   margin-right: 0;
 }
 
-/* cart */
-.cart {
+/* single product */
+.product__price {
+  display: inline-block;
+  line-height: 34px;
+}
 
+.product__button-wrap {
+  float: right;
+}
+
+/* cart */
+.cart ul {
+  margin-bottom: .7em;
+}
+
+.cart-item {
+  margin-bottom: .3em;
+}
+
+.cart-item__name {
+  display: inline-block;
+}
+
+.cart-item__price {
+  float: right;
 }
 
 .cart__total {
   font-weight: bold;
   font-size: 1.5em;
   line-height: 1.1em;
+  text-align: right;
 }
 
-/* utils */
-.cf:before,
-.cf:after {
+/* helpers */
+.clearfix:before,
+.clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
 
-.cf:after {
+.clearfix:after {
     clear: both;
 }
 
-.cf {
+.clearfix {
     *zoom: 1;
 }

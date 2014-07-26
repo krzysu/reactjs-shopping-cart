@@ -29,11 +29,11 @@ var Product = React.createClass({
         return (
           <div className="thumbnail">
             <img src={data.image} alt="product image" />
-            <div className="caption">
-              <h3>{data.name}</h3>
-              <div>{data.price} {data.currency}</div>
-              <div>
-                <button className="btn btn-primary" onClick={this.addToCart}>
+            <div className="caption clearfix">
+              <h3><a href={data.url}>{data.name}</a></h3>
+              <div className="product__price">{data.price} {data.currency}</div>
+              <div className="product__button-wrap">
+                <button className={this.state.added ? 'btn btn-danger' : 'btn btn-primary'} onClick={this.addToCart}>
                   {this.state.added ? 'Remove' : 'Add to cart'}
                 </button>
               </div>

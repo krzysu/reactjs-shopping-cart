@@ -12,7 +12,7 @@ var ProductsList = React.createClass({
         });
 
         return (
-          <ul className="cf">
+          <ul className="clearfix">
             {products}
           </ul>
         );
