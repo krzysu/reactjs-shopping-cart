@@ -25,7 +25,6 @@ var Cart = React.createClass({
       var itemIndexInArray;
 
       this.state.items.some(function(item, index) {
-        console.log(item, index);
         if(item.id === itemId) {
           itemIndexInArray = index;
           return true;

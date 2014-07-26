@@ -3,9 +3,9 @@
   <head>
     <title>React Shop</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <script src="build/react.js"></script>
-    <script src="build/JSXTransformer.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="scripts/libs/react.min.js"></script>
+    <script src="scripts/libs/JSXTransformer.js"></script>
   </head>
   <body>
 
@@ -27,7 +27,7 @@
         <div class="col-md-4">
           <h3>Shopping Cart</h3>
 
-          <div id="cart">
+          <div id="cart" class="cart">
             <!-- rendered by react js -->
           </div>
         </div>
@@ -35,11 +35,15 @@
     </div>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="build/jquery.ba-tinypubsub.js"></script>
+    <script src="scripts/libs/jquery.ba-tinypubsub.js"></script>
     <script src="data/products.js"></script>
-    <script type="text/jsx" src="components/product.js"></script>
-    <script type="text/jsx" src="components/products-list.js"></script>
-    <script type="text/jsx" src="components/cart.js"></script>
-    <script type="text/jsx" src="js/app.js"></script>
+    <script type="text/jsx" src="scripts/components/product.js"></script>
+    <script type="text/jsx" src="scripts/components/products-list.js"></script>
+    <script type="text/jsx" src="scripts/components/cart.js"></script>
+    <script type="text/jsx">
+      /** @jsx React.DOM */
+      React.renderComponent(<ProductsList data={productsCollection} />, document.getElementById('products-list'));
+      React.renderComponent(<Cart />, document.getElementById('cart'));
+    </script>
   </body>
 </html>

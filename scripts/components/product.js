@@ -33,9 +33,9 @@ var Product = React.createClass({
               <h3>{data.name}</h3>
               <div>{data.price} {data.currency}</div>
               <div>
-                <a href="#" className="btn btn-primary" onClick={this.addToCart}>
+                <button className="btn btn-primary" onClick={this.addToCart}>
                   {this.state.added ? 'Remove' : 'Add to cart'}
-                </a>
+                </button>
               </div>
             </div>
           </div>

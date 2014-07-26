@@ -1,9 +1,11 @@
-.products-list ul {
+/* global */
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* products */
 .products-list li {
   float: left;
   width: 30%;
@@ -12,6 +14,17 @@
 
 .products-list li:nth-of-type(3n) {
   margin-right: 0;
+}
+
+/* cart */
+.cart {
+
+}
+
+.cart__total {
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.1em;
 }
 
 /* utils */
