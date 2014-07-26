@@ -3,9 +3,6 @@
 var ProductsList = React.createClass({
     render: function() {
 
-                console.log(this.props);
-
-
         var products = this.props.data.map(function(product) {
             return (
               <li key={product.id}>
