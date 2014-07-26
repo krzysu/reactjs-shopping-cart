@@ -2,5 +2,5 @@
 
 example of shopping cart implemented in react.js
 
-author: Kris Urbas
+author: Kris Urbas   
 licence: MIT
