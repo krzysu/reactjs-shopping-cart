@@ -1,4 +1,4 @@
-var productsCollection = [
+const data = [
   {
     id: 1,
     name: 'Ohrensessel Josslyn',
@@ -47,4 +47,6 @@ var productsCollection = [
     image: 'images/03.jpg',
     url: 'http://www.home24.de/re-concept/sessel-anna-stoff-olivgruen-779539'
   }
-]
+];
+
+export default data;

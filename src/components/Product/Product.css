@@ -1,0 +1,12 @@
+.product {
+    margin: 0;
+}
+
+.product__price {
+    display: inline-block;
+    line-height: 34px;
+}
+
+.product__button-wrap {
+    float: right;
+}
