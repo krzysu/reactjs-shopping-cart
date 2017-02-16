@@ -7,7 +7,6 @@ const CART_REMOVE = 'cart/REMOVE';
 // reducer
 const initialState = {
     items: [], // array of product ids
-    total: 0,
     currency: 'EUR'
 };
 
@@ -25,24 +24,16 @@ export default function cart(state = initialState, action = {}) {
 function handleCartAdd(state, payload) {
     return {
         ...state,
-        items: [ ...state.items, payload.productId ],
-        total: 0, // countTotal(state.items)
+        items: [ ...state.items, payload.productId ]
     };
 }
 
 function handleCartRemove(state, payload) {
     return {
         ...state,
-        items: state.items.filter(item => item !== payload.productId),
-        total: 0, // countTotal(state.items)
+        items: state.items.filter(id => id !== payload.productId)
     };
 }
-
-// function countTotal(items) {
-//     return items.reduce((acc, item) => {
-//       return acc + item.price;
-//     }, 0);
-// }
 
 // action creators
 export function addToCart(productId) {
@@ -68,9 +59,17 @@ export function isInCart(state, props) {
     return state.cart.items.indexOf(props.id) !== -1;
 }
 
-export function getCart(state, props) {
-    return {
-        ...state.cart,
-        items: state.cart.items.map(id => getProduct(state, { id }))
-    }
+export function getItems(state, props) {
+    return state.cart.items.map(id => getProduct(state, { id }));
+}
+
+export function getCurrency(state, props) {
+    return state.cart.currency;
+}
+
+export function getTotal(state, props) {
+    return state.cart.items.reduce((acc, id) => {
+        const item = getProduct(state, { id });
+        return acc + item.price;
+    }, 0);
 }
