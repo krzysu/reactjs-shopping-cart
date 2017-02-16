@@ -1,7 +1,6 @@
 import React from 'react';
-import Cart from './components/Cart';
-import ProductList from './components/ProductList';
-import products from './data/products';
+import Cart from './containers/Cart';
+import ProductList from './containers/ProductList';
 
 const App = () => {
     return (
@@ -13,10 +12,10 @@ const App = () => {
             </div>
             <div className="row">
                 <div className="col-md-8">
-                    <ProductList products={products} />
+                    <ProductList />
                 </div>
                 <div className="col-md-4">
-                    Cart
+                    <Cart />
                 </div>
             </div>
 
@@ -30,40 +29,3 @@ const App = () => {
 }
 
 export default App;
-
-/*
-addItem: function(e, item) {
-  this.state.items.push(item);
-  this.forceUpdate();
-
-  this.countTotal();
-},
-
-removeItem: function(e, itemId) {
-  var itemIndexInArray;
-
-  this.state.items.some(function(item, index) {
-    if(item.id === itemId) {
-      itemIndexInArray = index;
-      return true;
-    }
-  });
-
-  this.state.items.splice(itemIndexInArray, 1);
-  this.forceUpdate();
-
-  this.countTotal();
-},
-
-countTotal: function() {
-  var total = 0;
-
-  this.state.items.forEach(function(item, index) {
-    total += item.price;
-  });
-
-  this.setState({
-    total: total
-  })
-},
-*/

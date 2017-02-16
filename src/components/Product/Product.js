@@ -2,7 +2,13 @@ import React, { Component, PropTypes } from 'react';
 
 class Product extends Component {
     handleClick = () => {
-        this.props.addToCart(this.props.id);
+        const { id, addToCart, removeFromCart, isInCart } = this.props;
+
+        if (isInCart) {
+            removeFromCart(id);
+        } else {
+            addToCart(id);
+        }
     }
 
     render() {
@@ -39,8 +45,7 @@ Product.propTypes = {
     url: PropTypes.string,
     isInCart: PropTypes.bool.isRequired,
     addToCart: PropTypes.func.isRequired,
+    removeFromCart: PropTypes.func.isRequired,
 }
-
-// connect to add isInCart an addToCart
 
 export default Product;
