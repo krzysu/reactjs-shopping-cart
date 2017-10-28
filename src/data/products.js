@@ -5,7 +5,6 @@ const data = [
     price: 499.99,
     currency: 'EUR',
     image: 'images/01.jpg',
-    url: 'http://www.home24.de/m-rteens/mit-hocker-917965'
   },
   {
     id: 2,
@@ -13,7 +12,6 @@ const data = [
     price: 249.99,
     currency: 'EUR',
     image: 'images/02.jpg',
-    url: 'http://www.home24.de/m-rteens/sessel-sofie-samtvelour-gruen-913483'
   },
   {
     id: 4,
@@ -21,7 +19,6 @@ const data = [
     price: 239.99,
     currency: 'EUR',
     image: 'images/04.jpg',
-    url: 'http://www.home24.de/m-rteens/schlafsessel-rovigo-kunstleder-weiss-911671'
   },
   {
     id: 6,
@@ -29,7 +26,6 @@ const data = [
     price: 119.99,
     currency: 'EUR',
     image: 'images/06.jpg',
-    url: 'http://www.home24.de/m-rteens/sessel-little-webstoff-rot-757345'
   },
   {
     id: 5,
@@ -37,7 +33,6 @@ const data = [
     price: 599.99,
     currency: 'EUR',
     image: 'images/05.jpg',
-    url: 'http://www.home24.de/kare-design/sessel-peacock-stoff-mehrfarbig'
   },
   {
     id: 3,
@@ -45,7 +40,6 @@ const data = [
     price: 149.99,
     currency: 'EUR',
     image: 'images/03.jpg',
-    url: 'http://www.home24.de/re-concept/sessel-anna-stoff-olivgruen-779539'
   }
 ];
 

@@ -13,15 +13,13 @@ class Product extends Component {
     }
 
     render() {
-        const { name, price, currency, image, url, isInCart } = this.props;
+        const { name, price, currency, image, isInCart } = this.props;
 
         return (
             <div className="product thumbnail">
                 <img src={image} alt="product" />
                 <div className="caption">
-                    <h3>
-                        <a href={url}>{name}</a>
-                    </h3>
+                    <h3>{name}</h3>
                     <div className="product__price">{price} {currency}</div>
                     <div className="product__button-wrap">
                         <button
@@ -43,7 +41,6 @@ Product.propTypes = {
     price: PropTypes.number,
     currency: PropTypes.string,
     image: PropTypes.string,
-    url: PropTypes.string,
     isInCart: PropTypes.bool.isRequired,
     addToCart: PropTypes.func.isRequired,
     removeFromCart: PropTypes.func.isRequired,

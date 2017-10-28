@@ -1,17 +1,21 @@
-.cart ul {
-  margin-bottom: .7em;
+.cart__body {
+  margin-bottom: 0.7em;
 }
 
 .cart-item {
-  margin-bottom: .3em;
+  margin-bottom: 0.3em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cart-item__name {
-  display: inline-block;
+  margin-left: 0.5em;
+  vertical-align: middle;
 }
 
 .cart-item__price {
-  float: right;
+  font-weight: bold;
 }
 
 .cart__total {
