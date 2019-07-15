@@ -4,7 +4,7 @@
   "homepage": "http://krzysu.github.io/reactjs-shopping-cart",
   "private": true,
   "devDependencies": {
-    "gh-pages": "^1.2.0",
+    "gh-pages": "^2.0.1",
     "react-scripts": "^1.1.5"
   },
   "dependencies": {
