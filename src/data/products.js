@@ -40,6 +40,13 @@ const data = [
     price: 149.99,
     currency: 'EUR',
     image: 'images/03.jpg',
+  },
+  {
+    id: 7,
+    name: 'turquoise high wing',
+    price: 367.98,
+    currency: 'EUR',
+    image: 'images/07.jpg',
   }
 ];
 
