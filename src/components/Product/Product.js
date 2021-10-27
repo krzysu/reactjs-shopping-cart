@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ProductDetail from './Product-Detail';
+
 
 class Product extends Component {
     handleClick = () => {
@@ -16,18 +18,21 @@ class Product extends Component {
         const { name, price, currency, image, isInCart } = this.props;
 
         return (
-            <div className="product thumbnail">
-                <img src={image} alt="product" />
-                <div className="caption">
-                    <h3>{name}</h3>
-                    <div className="product__price">{price} {currency}</div>
-                    <div className="product__button-wrap">
-                        <button
-                            className={isInCart ? 'btn btn-danger' : 'btn btn-primary'}
-                            onClick={this.handleClick}
-                        >
-                            {isInCart ? 'Remove' : 'Add to cart'}
-                        </button>
+            <div className="card mt-2" style={{width: "15rem"}}>
+                <img src={image} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">{price} {currency}</p>
+                    <div className="row text-center mb-3">
+                        <div className="col d-block">
+                            <button
+                                className={isInCart ? 'btn btn-danger' : 'btn btn-primary'}
+                                onClick={this.handleClick}
+                            >
+                                {isInCart ? 'Remove' : 'Add to cart'}
+                            </button>
+                            <ProductDetail {...this.props} />
+                        </div>
                     </div>
                 </div>
             </div>
