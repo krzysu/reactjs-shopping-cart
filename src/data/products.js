@@ -5,6 +5,7 @@ const data = [
     price: 499.99,
     currency: 'EUR',
     image: 'images/01.jpg',
+    link: 'https://buy.stripe.com/test_dR65mtgBicIrgQo3cd'
   },
   {
     id: 2,

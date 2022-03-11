@@ -2,18 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 class Product extends Component {
-    handleClick = () => {
-        const { id, addToCart, removeFromCart, isInCart } = this.props;
-
-        if (isInCart) {
-            removeFromCart(id);
-        } else {
-            addToCart(id);
-        }
+    handleClick = (link) => {
+        window.open(link, "_blank", "noopener,noreferrer")
     }
 
     render() {
-        const { name, price, currency, image, isInCart } = this.props;
+        const { name, price, currency, image, link, isInCart } = this.props;
 
         return (
             <div className="product thumbnail">
@@ -24,9 +18,9 @@ class Product extends Component {
                     <div className="product__button-wrap">
                         <button
                             className={isInCart ? 'btn btn-danger' : 'btn btn-primary'}
-                            onClick={this.handleClick}
+                            onClick={() => this.handleClick(link)}
                         >
-                            {isInCart ? 'Remove' : 'Add to cart'}
+                            {'Buy now'}
                         </button>
                     </div>
                 </div>
@@ -41,6 +35,7 @@ Product.propTypes = {
     price: PropTypes.number,
     currency: PropTypes.string,
     image: PropTypes.string,
+    link: PropTypes.string,
     isInCart: PropTypes.bool.isRequired,
     addToCart: PropTypes.func.isRequired,
     removeFromCart: PropTypes.func.isRequired,

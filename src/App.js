@@ -14,9 +14,6 @@ const App = () => {
                 <div className="col-md-8">
                     <ProductList />
                 </div>
-                <div className="col-md-4">
-                    <Cart />
-                </div>
             </div>
 
             <footer>
